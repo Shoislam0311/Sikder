@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Room {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  price       Int
+  size        String
+  capacity    String
+  description String
+  image       String
+  amenities   String
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  bookings    Booking[]
+}
+
+model Booking {
+  id          String   @id @default(cuid())
+  roomSlug    String
+  roomName    String
+  guestName   String
+  email       String
+  phone       String
+  checkIn     String
+  checkOut    String
+  adults      Int
+  children    Int
+  specialReq  String?
+  totalAmount Int
+  status      String   @default("pending") // pending | confirmed | cancelled
+  createdAt   DateTime @default(now())
+  room        Room     @relation(fields: [roomSlug], references: [slug], onDelete: Cascade)
+
+  @@index([roomSlug])
+  @@index([email])
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}

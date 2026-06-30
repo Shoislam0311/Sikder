@@ -1,0 +1,36 @@
+<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C9A24B"/>
+      <stop offset="50%" stop-color="#E6C878"/>
+      <stop offset="100%" stop-color="#B0832E"/>
+    </linearGradient>
+    <linearGradient id="emGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2F5D52"/>
+      <stop offset="100%" stop-color="#1E4239"/>
+    </linearGradient>
+  </defs>
+  <!-- Sun emblem -->
+  <g transform="translate(30,32)">
+    <circle r="11" fill="url(#goldGrad)"/>
+    <g stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-16" x2="0" y2="-21"/>
+      <line x1="0" y1="16" x2="0" y2="21"/>
+      <line x1="-16" y1="0" x2="-21" y2="0"/>
+      <line x1="16" y1="0" x2="21" y2="0"/>
+      <line x1="-11.3" y1="-11.3" x2="-14.8" y2="-14.8"/>
+      <line x1="11.3" y1="-11.3" x2="14.8" y2="-14.8"/>
+      <line x1="-11.3" y1="11.3" x2="-14.8" y2="14.8"/>
+      <line x1="11.3" y1="11.3" x2="14.8" y2="14.8"/>
+    </g>
+  </g>
+  <!-- Waves -->
+  <g transform="translate(30,48)" stroke="url(#emGrad)" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M-15,0 Q-7.5,-4 0,0 T15,0"/>
+    <path d="M-12,5 Q-6,2 0,5 T12,5" opacity="0.6"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="60" y="27" font-family="Cormorant Garamond, Georgia, serif" font-size="22" font-weight="600" fill="#2F5D52" letter-spacing="0.5">Sikder</text>
+  <text x="60" y="49" font-family="Jost, sans-serif" font-size="9.5" font-weight="400" fill="#B0832E" letter-spacing="3.2">RESORT &amp; VILLAS</text>
+  <text x="125" y="49" font-family="Jost, sans-serif" font-size="8" font-weight="300" fill="#7A6A4F" letter-spacing="2">·</text>
+</svg>
