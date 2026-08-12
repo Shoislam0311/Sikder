@@ -1,23 +1,25 @@
-# Sikder Villa & Resort
+<p align="center"><img src="./assets/aura-banner.svg" alt="A stay worth remembering" width="100%" /></p>
+<p align="center"><a href="https://sikder-three.vercel.app">Live site</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/Shoislam0311/Sikder">Source</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="docs/TECH_STACK.md">Stack notes</a></p>
 
-Sikder Villa & Resort is a hospitality website for presenting rooms, dining, events, wellness facilities, gallery content, contact information, and a reservation flow in a polished responsive interface.
+> A hospitality interface shaped around arrival, discovery, and reservation.
 
-## Technology Stack
+## The property, translated to screen
 
-| Layer | Technology | Evidence in repository |
-|---|---|---|
-| Framework | Next.js 16 with React 19 and TypeScript | `package.json`, `src/app/`, `tsconfig.json` |
-| Styling | Tailwind CSS 4 with PostCSS and animation utilities | `tailwind.config.ts`, `postcss.config.mjs` |
-| UI primitives | Radix UI, class-variance-authority, `lucide-react` | `src/components/ui/`, `package.json` |
-| State and forms | Zustand, React Hook Form, Zod | `package.json`, `src/lib/` |
-| Data layer | Prisma ORM with SQLite database asset | `prisma/schema.prisma`, `db/custom.db` |
-| Content and interaction | MDX Editor, React Markdown, Framer Motion, Recharts | `package.json` |
-| Authentication and localization | NextAuth and next-intl | `package.json` |
-| Production runtime | Bun standalone server | `package.json` scripts, `bun.lock` |
+Sikder Villa & Resort is a modern digital front door for a real hospitality brand in Kuakata, Bangladesh. The experience gives rooms, dining, events, wellness, gallery, contact, and reservation flows a consistent visual home.
 
-## Local Development
+## The guest journey
 
-Install dependencies with Bun, generate the Prisma client, and start the development server:
+```text
+Discover  →  Explore rooms  →  Feel the place  →  Reserve  →  Arrive
+```
+
+The interface is organized to keep that journey legible: editorial sections for atmosphere, structured content for decisions, and focused interactions where an action matters.
+
+## Stack signal
+
+`Next.js 16` · `React 19` · `TypeScript` · `Tailwind CSS 4` · `Radix UI` · `Prisma` · `SQLite` · `NextAuth` · `next-intl` · `Zustand` · `Bun`
+
+## Run it locally
 
 ```bash
 bun install
@@ -25,7 +27,7 @@ bun run db:generate
 bun run dev
 ```
 
-Useful project commands include:
+Before production:
 
 ```bash
 bun run lint
@@ -33,12 +35,10 @@ bun run build
 bun run start
 ```
 
-Database workflows are available through `bun run db:push`, `bun run db:migrate`, and `bun run db:reset`. Review the schema and local data implications before running destructive commands.
+Database workflows are available through `bun run db:push`, `bun run db:migrate`, and `bun run db:reset`. Review the schema before destructive commands.
 
-## Project Structure
+## Where things live
 
-The Next.js application is organized under `src/app`. Resort-specific sections are in `src/components/site`, reusable interface primitives are in `src/components/ui`, and shared state, utilities, and database access are grouped under `src/lib`.
+The Next.js application is under `src/app`. Resort sections live in `src/components/site`, reusable primitives in `src/components/ui`, and shared state, utilities, and database access in `src/lib`.
 
-## Operational Notes
-
-The production build creates a standalone Next.js output and copies static assets into it. Verification scripts are provided under `scripts/`; run the relevant checks when changing booking, visual, or deployment behavior.
+<p align="center"><sub>Hospitality, translated into a calmer digital experience.</sub></p>
